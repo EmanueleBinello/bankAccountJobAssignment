@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "4dc3347b-882a-48b3-869a-ab49d6a628f6",
+		"name": "bankaccount",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34569688"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/bankaccount/getBalance/14537780",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/bankaccount/getBalance/14537780"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/bankaccount/getTransactions/14537780?fromAccountingDate=2019-01-01&toAccountingDate=2024-12-01",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bankaccount/getTransactions/14537780?fromAccountingDate=2019-01-01&toAccountingDate=2019-12-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankaccount",
+						"getTransactions",
+						"14537780"
+					],
+					"query": [
+						{
+							"key": "fromAccountingDate",
+							"value": "2019-01-01"
+						},
+						{
+							"key": "toAccountingDate",
+							"value": "2019-12-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/bankaccount/postBankTransfer/14537780",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"creditorName\": \"John Doe\",\r\n  \"accountCode\": \"IT23A0336844430152923804660\",\r\n  \"bicCode\": \"SELBIT2BXXX\",\r\n  \"description\": \"Payment invoice 75/2017\",\r\n  \"currency\": \"EUR\",\r\n  \"amount\": 500,\r\n  \"executionDate\": \"2024-04-27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/bankaccount/postBankTransfer/14537780"
+			},
+			"response": []
+		}
+	]
+}
